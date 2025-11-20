@@ -1,0 +1,14 @@
+# Vite + React + TypeScript
+node_modules
+.DS_Store
+dist
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+*.local
+.idea
+.vscode/*.log
+!.vscode/extensions.json
+.env
+.env.*
