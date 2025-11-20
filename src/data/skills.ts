@@ -1,57 +1,53 @@
 export type SkillCategory = {
   name: string;
-  level: number; // 1-100 proficiency for chart
+  level: number; // 0-100 proficiency
+  summary: string;
   items: string[];
-};
-
-export type Strength = {
-  name: string;
-  score: number; // 1-10
 };
 
 export const skillCategories: SkillCategory[] = [
   {
     name: 'Frontend',
     level: 92,
+    summary: 'SPA development with React, NextJS, Angular, Vue, and TypeScript.',
     items: ['React', 'NextJS', 'Angular', 'Vue.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3'],
   },
   {
     name: 'Backend',
     level: 85,
+    summary: 'Node.js services with Express/Nest, REST and GraphQL APIs.',
     items: ['Node.js', 'Express', 'NestJS', 'RESTful APIs', 'GraphQL'],
-  },
-  {
-    name: 'State Mgmt',
-    level: 88,
-    items: ['Redux', 'Context API'],
   },
   {
     name: 'Testing',
     level: 80,
+    summary: 'Quality and reliability with unit, integration, and e2e coverage.',
     items: ['Jest', 'Playwright', 'Mocha', 'Cypress'],
   },
   {
     name: 'DevOps',
     level: 83,
+    summary: 'Automation, delivery pipelines, and infrastructure as code.',
     items: ['Docker', 'Kubernetes', 'CI/CD', 'Terraform', 'Akamai'],
   },
   {
     name: 'Cloud',
     level: 78,
+    summary: 'AWS and GCP deployments, serverless patterns, and scaling.',
     items: ['AWS', 'GCP'],
   },
   {
     name: 'Design/UX',
-    level: 82,
+    level: 75,
+    summary: 'Inclusive, responsive experiences with strong accessibility.',
     items: ['Responsive layouts', 'Accessibility (WCAG)', 'Cross-browser compatibility'],
   },
 ];
 
-export const coreStrengths: Strength[] = [
-  { name: 'React', score: 9.5 },
-  { name: 'Node.js', score: 8.8 },
-  { name: 'Terraform', score: 8.4 },
-  { name: 'AWS/GCP', score: 8.2 },
-  { name: 'Testing', score: 8.5 },
-  { name: 'Design Systems', score: 8.7 },
+export const primaryChartData = skillCategories.map(({ name, level }) => ({ name, level }));
+
+export const mixChartData = [
+  { name: 'Frontend', value: 40 },
+  { name: 'Backend', value: 30 },
+  { name: 'DevOps/Cloud', value: 30 },
 ];
