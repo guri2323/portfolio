@@ -7,6 +7,11 @@ export type ExperienceItem = {
   bullets: string[];
 };
 
+export type ExperienceDistribution = {
+  name: string;
+  years: number;
+};
+
 export const experiences: ExperienceItem[] = [
   {
     company: 'PC Financial',
@@ -66,4 +71,10 @@ export const experiences: ExperienceItem[] = [
       'Worked with backend teams to integrate APIs.',
     ],
   },
+];
+
+export const experienceDistribution: ExperienceDistribution[] = [
+  { name: 'Full-Stack', years: 4 },
+  { name: 'Backend', years: 3 },
+  { name: 'Frontend', years: 2 },
 ];
