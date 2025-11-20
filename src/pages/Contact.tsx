@@ -5,8 +5,8 @@ import { personalInfo } from '../data/personal';
 const Contact = () => {
   return (
     <section className="section">
-      <div className="grid gap-10 lg:grid-cols-2">
-        <div className="space-y-3">
+      <div className="grid gap-8 lg:gap-12 lg:grid-cols-2">
+        <div className="space-y-4">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-500">Contact</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">Tell me about your project.</h2>
           <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -44,7 +44,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <form className="glass-panel p-6 space-y-4">
+        <form className="glass-panel p-6 space-y-4 w-full max-w-xl mx-auto lg:mx-0">
           <div>
             <label className="block text-sm text-slate-700 dark:text-slate-200">Name</label>
             <input

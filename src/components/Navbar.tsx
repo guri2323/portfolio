@@ -87,7 +87,7 @@ const Navbar = ({ isDark, onToggleTheme }: NavbarProps) => {
 
       {isOpen ? (
         <div className="md:hidden border-t border-slate-200/70 bg-white/90 backdrop-blur dark:border-white/10 dark:bg-slate-900/90">
-          <nav className="container-xl flex flex-col gap-2 py-4">
+          <nav className="container-xl flex flex-col gap-3 py-4">
             <NavLink to="/" className={linkClasses} onClick={() => setIsOpen(false)}>
               Home
             </NavLink>

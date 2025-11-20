@@ -5,12 +5,12 @@ const COLORS = ['#6366f1', '#06b6d4', '#fbbf24'];
 
 const ExperienceChart = ({ data }: { data: ExperienceDistribution[] }) => {
   return (
-    <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 shadow-xl">
+    <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 shadow-xl w-full max-w-md mx-auto">
       <div className="text-center space-y-2">
         <p className="text-sm uppercase tracking-[0.2em] text-indigo-300">Experience mix</p>
         <h3 className="text-xl font-semibold text-slate-50">How my time is spent</h3>
       </div>
-      <div className="h-72 w-full mt-4">
+      <div className="h-72 min-h-[260px] w-full mt-4">
         <ResponsiveContainer>
           <PieChart>
             <Pie

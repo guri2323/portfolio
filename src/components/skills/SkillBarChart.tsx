@@ -15,8 +15,8 @@ type SkillBarChartProps = {
 
 const SkillBarChart = ({ data }: SkillBarChartProps) => {
   return (
-    <div className="glass-panel bg-slate-900 text-slate-50 border-slate-800 p-6">
-      <div className="flex items-center justify-between mb-4">
+    <div className="glass-panel bg-slate-900 text-slate-50 border-slate-800 p-6 w-full">
+      <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between mb-4">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-indigo-300">Chart</p>
           <h3 className="text-lg font-semibold">Category proficiency</h3>
@@ -25,7 +25,7 @@ const SkillBarChart = ({ data }: SkillBarChartProps) => {
           0-100 scale
         </span>
       </div>
-      <div className="h-72 w-full">
+      <div className="h-72 min-h-[260px] w-full">
         <ResponsiveContainer>
           <BarChart data={data} margin={{ left: 12, right: 12, bottom: 12 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(148, 163, 184, 0.2)" />

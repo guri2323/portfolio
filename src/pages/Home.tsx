@@ -39,9 +39,9 @@ const experiencePreview = [
 const Home = () => {
   return (
     <div className="bg-slate-950 text-slate-50">
-      <section className="max-w-6xl mx-auto px-4 md:px-8 py-16 space-y-12">
+      <section className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-16 space-y-10 md:space-y-12">
         {/* Hero */}
-        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div className="grid gap-8 md:gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,10 +54,10 @@ const Home = () => {
             </div>
             <div className="space-y-4">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-300">Gurleen Singh</p>
-              <h1 className="font-display text-4xl leading-tight sm:text-5xl">
+              <h1 className="font-display text-3xl leading-tight sm:text-4xl md:text-5xl">
                 Crafting cloud-ready products with React and Node.
               </h1>
-              <p className="text-lg text-slate-200 leading-relaxed max-w-3xl">
+              <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-3xl">
                 Senior Full Stack Developer with {personalInfo.experience} of expertise leading initiatives on scalable,
                 serverless platforms. I build fast, reliable web applications with React, Node, and TypeScript, backed by robust
                 APIs, testing, and cloud-native infrastructure on AWS and GCP.
@@ -95,7 +95,7 @@ const Home = () => {
         </div>
 
         {/* Highlights */}
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {stats.map((stat) => (
             <div
               key={stat.title}
@@ -110,7 +110,7 @@ const Home = () => {
         {/* Preview section */}
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="space-y-4 rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-lg">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="text-sm uppercase tracking-[0.2em] text-indigo-300">Skills at a glance</p>
                 <h3 className="text-xl font-semibold text-slate-50">Front to back, with ops in between</h3>
@@ -130,7 +130,7 @@ const Home = () => {
           </div>
 
           <div className="space-y-4 rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-lg">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="text-sm uppercase tracking-[0.2em] text-indigo-300">Recent experience</p>
                 <h3 className="text-xl font-semibold text-slate-50">Impact-focused delivery</h3>

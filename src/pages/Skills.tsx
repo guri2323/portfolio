@@ -8,7 +8,7 @@ const Skills = () => {
   return (
     <section className="bg-slate-950 text-slate-50">
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-12 space-y-12">
-        <header className="space-y-3">
+        <header className="space-y-3 text-left">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-300">Skills & Tooling</p>
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-50">
             Building performant, accessible front-ends with robust APIs, testing, and cloud-native delivery.
@@ -40,7 +40,7 @@ const Skills = () => {
             <h2 className="text-2xl font-semibold text-slate-50">Category breakdown</h2>
             <p className="text-slate-300">Each card highlights the toolkit and primary responsibilities for that area.</p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {skillCategories.map((category) => (
               <SkillCategoryCard key={category.name} category={category} />
             ))}

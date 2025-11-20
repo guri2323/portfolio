@@ -19,7 +19,7 @@ const About = () => {
 
   return (
     <section className="section space-y-10">
-      <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+      <div className="grid gap-8 md:gap-10 md:grid-cols-2 md:items-start">
         <div className="space-y-4">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-500">About</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">From junior to senior, crafting resilient products.</h2>

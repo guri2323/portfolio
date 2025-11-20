@@ -5,14 +5,14 @@ const COLORS = ['#6366f1', '#22d3ee', '#f59e0b'];
 
 const SkillMixPie = ({ data }: { data: PieData[] }) => {
   return (
-    <div className="glass-panel bg-slate-900 text-slate-50 border-slate-800 p-6">
+    <div className="glass-panel bg-slate-900 text-slate-50 border-slate-800 p-6 w-full">
       <div className="flex items-center justify-between mb-4">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-indigo-300">Snapshot</p>
           <h3 className="text-lg font-semibold">Focus mix</h3>
         </div>
       </div>
-      <div className="h-64 w-full">
+      <div className="h-64 min-h-[240px] w-full">
         <ResponsiveContainer>
           <PieChart>
             <Pie
