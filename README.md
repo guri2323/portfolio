@@ -1,19 +1,21 @@
-# Portfolio (React + Vite + TypeScript)
+# Portfolio (React + Vite + TypeScript + Tailwind)
 
-This folder contains a single Vite-powered React + TypeScript portfolio site (no nested project directory).
+Polished developer portfolio for **Gurleen Singh** (Senior Full Stack Developer) with React Router, Tailwind, Recharts visualizations, and data-driven sections.
 
-## Structure
+## Structure (key files)
 
-- `index.html`: Root HTML file used by Vite.
-- `vite.config.ts`: Vite + React plugin configuration.
-- `tsconfig.json` / `tsconfig.node.json`: TypeScript configuration.
-- `src/`: Application source.
-  - `main.tsx`: App entry that mounts React with React Router.
-  - `App.tsx`: App shell with routing and layout.
-  - `index.css`: Global styling (modern, minimal).
-  - `components/`: Reusable UI (Navbar, Footer).
-  - `pages/`: Page components (Home, About, Projects, Contact).
-- `.gitignore`: Ignores build artifacts and tooling noise.
+- `index.html`: Root HTML with Google Fonts.
+- `vite.config.ts`: Vite + React config (base set to `/portfolio/` for GH Pages).
+- `tailwind.config.js` / `postcss.config.js`: Tailwind + PostCSS.
+- `tsconfig*.json`: TypeScript configs.
+- `src/` (TS/TSX only):
+  - `main.tsx`, `App.tsx`: App entry/layout with routing.
+  - `index.css`: Tailwind layers + shared utilities.
+  - `components/`: Navbar, Footer, SkillCharts, SkillBadges, ExperienceTimeline, ProjectCard, etc.
+  - `pages/`: Home, Skills, Experience, Projects, About, Contact.
+  - `data/`: `skills.ts`, `experience.ts`, `projects.ts`, `personal.ts` (all editable).
+- `.github/workflows/deploy.yml`: GitHub Pages deployment (GH Actions).
+- `.gitignore`: Ignores build artifacts (includes `*.tsbuildinfo`).
 
 ## Scripts
 
@@ -22,9 +24,26 @@ This folder contains a single Vite-powered React + TypeScript portfolio site (no
 - `npm run build` — build the production bundle.
 - `npm run preview` — preview the production build locally.
 
+## Tailwind / Charts / Icons dependencies
+
+- UI: `tailwindcss`, `postcss`, `autoprefixer`
+- Motion: `framer-motion`
+- Charts: `recharts`
+- Icons: `react-icons`
+
+Install (if needed): `npm install -D tailwindcss postcss autoprefixer` and `npm install recharts framer-motion react-icons`
+
+## Editing content
+
+- Update personal/contact info: `src/data/personal.ts`
+- Skills & strengths: `src/data/skills.ts` (affects charts + badges)
+- Experience timeline: `src/data/experience.ts`
+- Projects grid: `src/data/projects.ts`
+- Theme (colors/fonts): `tailwind.config.js`
+
 ## Deploying to GitHub Pages
 
-1) Repo should be named `portfolio` (the Vite `base` is hard-coded to `/portfolio/` in `vite.config.ts`). If you choose a different repo name, update that `base` value.  
-2) Push to `main` (or `master`). The workflow `.github/workflows/deploy.yml` installs, builds, copies `dist/index.html` to `dist/404.html` for SPA routing, and publishes to GitHub Pages.  
-3) In GitHub, enable Pages with the source set to **GitHub Actions**.  
-4) Your site will be available at `https://<username>.github.io/portfolio/` (or the base you configure).
+1) Repo should be named `portfolio` (or update `base` in `vite.config.ts`).  
+2) Push to `main` (or `master`). Workflow builds, adds SPA fallback, and deploys.  
+3) In GitHub, set Pages source to **GitHub Actions**.  
+4) Live URL: `https://<username>.github.io/portfolio/` (or your configured base).

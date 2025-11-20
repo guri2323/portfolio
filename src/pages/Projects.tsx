@@ -1,38 +1,23 @@
+import ProjectCard from '../components/ProjectCard';
+import { projects } from '../data/projects';
+
 // Projects page with placeholder case studies
 const Projects = () => {
-  const projects = [
-    {
-      title: 'Interface Revamp',
-      description: 'Redesigned a SaaS dashboard with streamlined navigation and quicker insight discovery.',
-      link: '#',
-    },
-    {
-      title: 'Design System Launch',
-      description: 'Built a reusable component library with documentation, tokens, and CI-driven visual tests.',
-      link: '#',
-    },
-    {
-      title: 'Performance Sprint',
-      description: 'Cut load times by 40% through code-splitting, image optimization, and smarter caching.',
-      link: '#',
-    },
-  ];
-
   return (
-    <section className="section">
-      <p className="eyebrow">Selected work</p>
-      <h2>Projects that mix polish with pragmatism.</h2>
-      <div className="grid">
+    <section className="section space-y-8">
+      <div className="space-y-3">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-500">Selected Work</p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">
+          Projects that mix polish with pragmatism.
+        </h2>
+        <p className="text-slate-600 dark:text-slate-300 max-w-3xl">
+          A sampling of recent build-outs. Each project balances craft with measurable outcomes and reliable delivery.
+        </p>
+      </div>
+
+      <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
-          <article key={project.title} className="card">
-            <div className="card__header">
-              <h3>{project.title}</h3>
-              <a href={project.link} className="text-link">
-                View
-              </a>
-            </div>
-            <p>{project.description}</p>
-          </article>
+          <ProjectCard key={project.title} project={project} />
         ))}
       </div>
     </section>
