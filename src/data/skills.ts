@@ -5,6 +5,11 @@ export type SkillCategory = {
   items: string[];
 };
 
+export type Strength = {
+  name: string;
+  score: number; // 0-10
+};
+
 export const skillCategories: SkillCategory[] = [
   {
     name: 'Frontend',
@@ -51,3 +56,6 @@ export const mixChartData = [
   { name: 'Backend', value: 30 },
   { name: 'DevOps/Cloud', value: 30 },
 ];
+
+// Optional legacy data for any components expecting strengths
+export const coreStrengths: Strength[] = [];
