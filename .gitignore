@@ -12,3 +12,6 @@ pnpm-lock.yaml
 !.vscode/extensions.json
 .env
 .env.*
+.nvmrc
+# TypeScript build info
+*.tsbuildinfo

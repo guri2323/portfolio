@@ -1,21 +1,23 @@
+import { Link } from 'react-router-dom';
+
 // Home page with hero and highlights
 const Home = () => {
   return (
     <section className="section">
       <div className="hero">
         <p className="eyebrow">Welcome</p>
-        <h1>Hi, I\'m Your Name — crafting thoughtful digital experiences.</h1>
+        <h1>Hi, I&apos;m Your Name — crafting thoughtful digital experiences.</h1>
         <p className="lead">
           I design and build performant products with a focus on clarity, modern aesthetics, and delightful
           interactions.
         </p>
         <div className="cta-row">
-          <a className="button" href="/projects">
+          <Link className="button" to="/projects">
             View Projects
-          </a>
-          <a className="text-link" href="/contact">
+          </Link>
+          <Link className="text-link" to="/contact">
             Get in touch
-          </a>
+          </Link>
         </div>
       </div>
       <div className="grid">
